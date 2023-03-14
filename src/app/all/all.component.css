@@ -1,0 +1,39 @@
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container {
+  height: auto;
+  width: 200px;
+  padding: 2px 16px;
+}
+
+#titulo {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: larger;
+}
+
+#imagem {
+  display: flex;
+  height: 200px;
+  width: 200px;
+}
+
+.organizacao {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.buttoncolor {
+  background-color:#0a0a99;
+  color: #fff;
+  border:none;
+  border-radius:10px;
+  padding:15px;
+  min-height:30px;
+  min-width: 120px;
+  max-width: 120px;
+}

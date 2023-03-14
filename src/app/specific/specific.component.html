@@ -1,0 +1,11 @@
+<div>
+  <h2>{{ photoPorId.title }}</h2>
+  <img [src]="photoPorId.thumbnailUrl" />
+  <img style="padding-left: 30px" [src]="photoPorId.url" />
+  <h2>album: {{ photoPorId.albumId }}</h2>
+  <div *ngFor="let contat of contatPorPhoto">
+    <h1>Comentario da(o): {{ contat.name }}</h1>
+    <h2>Endereço de email: {{ contat.email }}</h2>
+    <h3>Comentario: {{ contat.body }}</h3>
+  </div>
+</div>

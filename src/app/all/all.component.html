@@ -1,0 +1,27 @@
+<div class="organizacao">
+  <h1>{{ albums[p - 1]?.title }}</h1>
+  <button class="buttoncolor" routerLink="/posts">post</button>
+  <div class="photos">
+    <div
+      class="container"
+      *ngFor="
+        let photo of photos | paginate : { itemsPerPage: 50, currentPage: p }
+      "
+    >
+      <img
+        [routerLink]="['/specific-photos']"
+        [queryParams]="{ id: photo.id }"
+        id="imagem"
+        src="{{ photo.thumbnailUrl }}"
+      />
+      <div
+        [routerLink]="['/specific-photos']"
+        [queryParams]="{ id: photo.id }"
+        id="titulo"
+      >
+        {{ photo.title | uppercase }}
+      </div>
+    </div>
+  </div>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

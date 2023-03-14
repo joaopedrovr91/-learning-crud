@@ -1,0 +1,5 @@
+<button class="buttoncolor" routerLink="/all-photos">Voltar</button>
+<div class="textos" *ngFor="let allpost of allposts">
+  <h2 class="h2color">{{ allpost.title }}</h2>
+  <h3>postagem: {{ allpost.body }}</h3>
+</div>
